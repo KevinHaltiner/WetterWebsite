@@ -275,7 +275,11 @@ body {
   }
 }
 
-
+@media screen and (max-height: 600px) {
+  body {
+    overflow-y: auto;
+  }
+}
 
 /*
   overall desgon alex part
