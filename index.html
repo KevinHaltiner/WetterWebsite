@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetterübersicht</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Oswald:wght@400;700&family=Raleway:wght@400;700&family=Slabo+27px&family=Ubuntu:wght@400;700&family=Open+Sans:wght@400;600&family=Source+Serif+Pro:wght@400;600&family=Fira+Sans:wght@400;600&family=Quicksand:wght@400;700&family=Cabin:wght@400;600&family=Muli:wght@400;700&family=Anton&family=Inconsolata:wght@400;700&family=Rubik:wght@400;700&family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+  <!--Anfang Widget-->
+  <div class="widgetside">
+    <div class="widget" onclick="getWeather('Berlin')">
+      <div id="ww_da0284123d766" v='1.3' loc='id' a='{"t":"horizontal","lang":"de","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Mehr Vorhersagen: <a href="https://oneweather.org/de/deutschland/21_tage/" id="ww_da0284123d766_u" target="_blank">Wettervorschau 21 tage</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_da0284123d766"></script>
+    </div>
+    <div class="widget" onclick="getWeather('Zürich')">
+      <div id="ww_e3db12b6a7395" v='1.3' loc='id' a='{"t":"horizontal","lang":"de","sl_lpl":1,"ids":["wl8349"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/" id="ww_e3db12b6a7395_u" target="_blank">Html weather widget</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_e3db12b6a7395"></script>
+    </div>
+    <div class="widget" onclick="getWeather('Auckland')">
+      <div id="ww_96fe341eac28d" v='1.3' loc='id' a='{"t":"horizontal","lang":"de","sl_lpl":1,"ids":["wl7833"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/" id="ww_96fe341eac28d_u" target="_blank">Weather widget html</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_96fe341eac28d"></script>
+    </div>
+    <div class="widget" onclick="getWeather('Tokio')">
+      <div id="ww_a23bbab5527c4" v='1.3' loc='id' a='{"t":"horizontal","lang":"de","sl_lpl":1,"ids":["wl926"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Mehr Vorhersagen: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_a23bbab5527c4_u" target="_blank">東京都 天気 10日間</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_a23bbab5527c4"></script>
+    </div>
+    <div class="widget" onclick="getWeather('Belo Horizonte')">
+      <div id="ww_95551d87322c7" v='1.3' loc='id' a='{"t":"horizontal","lang":"de","sl_lpl":1,"ids":["wl3284"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Quelle der Wetterdaten: <a href="https://wetterlang.de" id="ww_95551d87322c7_u" target="_blank">Wettervorschau 30 tage</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_95551d87322c7"></script>
+    </div>
+    <div class="widget" onclick="getWeather('Florence')">
+      <div id="ww_5788ce6c1a0f1" v='1.3' loc='id' a='{"t":"horizontal","lang":"de","sl_lpl":1,"ids":["wl7984"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Mehr Vorhersagen: <a href="https://oneweather.org/rome/30_days/" id="ww_5788ce6c1a0f1_u" target="_blank">Rome 30 day forecast</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_5788ce6c1a0f1"></script>
+    </div>
+  </div>
+  <!--Ende Widget-->
+
+  <!--Anfang Main-->
+  <div class="main">
+    <div class="search-bar">
+      <input type="text" id="city" placeholder="Suche..." />
+    </div>   
+    <div class="weather" id="weather_1">
+      <h2 id="city-name"></h2>
+      <!--<img id="weather-icon" src="" alt="">-->
+      <p id="temperature"></p>
+    </div>
+ 
+    <div class="weather">
+    <h2>Wettervorhersage in den nächsten 5 Tagen</h2>
+    </div>
+    <div class="icons">
+      <div class="icon" id="icon1"></div>
+      <div class="icon" id="icon2"></div>
+      <div class="icon" id="icon3"></div>
+      <div class="icon" id="icon4"></div>
+      <div class="icon" id="icon5"></div>
+    </div>
+    <div class="bottom">
+      <div class="box">
+        <p id="feels"></p>
+        <!--<p id="max"></p>
+        <p id="min"></p>-->
+        <p id="wind"></p>
+        <p id="cloud"></p>
+      </div>
+      <div class="box">
+        <p id="humidity"></p>
+        
+        <p id="pressure"></p>
+        <p id="visibility"></p>
+      </div>
+    </div>
+  </div>
+
+  <!--Ende Main-->
+  <script src="./script.js"></script>
+</body>
+</html>
